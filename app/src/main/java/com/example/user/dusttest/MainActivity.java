@@ -27,9 +27,16 @@ public class MainActivity extends AppCompatActivity implements GetDustJson {
             }
         });
         text = findViewById(R.id.result);
+        text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // hm.. it is slow.. why???s
+            }
+        });
         result = findViewById(R.id.result);
         ApiDust.getInstance().getDustInfo(MainActivity.this, MainActivity.this);
 
+        //this is github test
     }
 
     @Override
